@@ -1,0 +1,155 @@
+export const utilizador = {
+  nome: 'Ana Silva',
+  nbi: '1234567 A',
+  chaveDigitalAtiva: true,
+  contaAtiva: true,
+  avatar: null,
+};
+
+export const conta = {
+  numero: '0001 2345 6789 0000',
+  iban: 'CV05 0003 0000 0012 3456 7890 0',
+  saldo: 47_320.50,
+  limite: 150_000,
+  moeda: 'ECV',
+  cartao: {
+    numero: '5268 •••• •••• 4821',
+    numeroCompleto: '5268 1234 5678 4821',
+    validade: '08/28',
+    cvv: '•••',
+    ativo: true,
+    titular: 'ANA SILVA',
+  },
+};
+
+export const transacoes = [
+  {
+    id: '1',
+    tipo: 'saida' as const,
+    descricao: 'Pagamento IUR 2024',
+    entidade: 'DGCI - Direção Geral das Contribuições',
+    valor: 12_500,
+    data: '2026-04-24',
+    hora: '10:32',
+    categoria: 'pagamento' as const,
+    estado: 'concluida' as const,
+    referencia: 'REF-2024-IUR-00891',
+  },
+  {
+    id: '2',
+    tipo: 'entrada' as const,
+    descricao: 'Subsídio Social',
+    entidade: 'INPS - Instituto Nacional de Previdência Social',
+    valor: 15_000,
+    data: '2026-04-20',
+    hora: '08:00',
+    categoria: 'receita_estado' as const,
+    estado: 'concluida' as const,
+    referencia: 'INPS-SS-2026-04',
+  },
+  {
+    id: '3',
+    tipo: 'saida' as const,
+    descricao: 'Transferência para João Monteiro',
+    entidade: 'Conta Digital Gov',
+    valor: 5_000,
+    data: '2026-04-18',
+    hora: '14:15',
+    categoria: 'transferencia' as const,
+    estado: 'concluida' as const,
+    referencia: 'TRF-2026-00445',
+  },
+  {
+    id: '4',
+    tipo: 'saida' as const,
+    descricao: 'Taxa de Renovação CNI',
+    entidade: 'SNIAC - Sistema Nacional de Identificação',
+    valor: 1_500,
+    data: '2026-04-15',
+    hora: '11:45',
+    categoria: 'pagamento' as const,
+    estado: 'concluida' as const,
+    referencia: 'SNIAC-2026-00122',
+  },
+  {
+    id: '5',
+    tipo: 'entrada' as const,
+    descricao: 'Reembolso IRS 2023',
+    entidade: 'DGCI - Direção Geral das Contribuições',
+    valor: 8_200,
+    data: '2026-04-10',
+    hora: '09:00',
+    categoria: 'receita_estado' as const,
+    estado: 'concluida' as const,
+    referencia: 'DGCI-REEMB-2023-00334',
+  },
+];
+
+export const contasAssociadas = [
+  {
+    id: '1',
+    sigla: 'BCA',
+    nomeBanco: 'Banco Comercial do Atlântico',
+    nib: 'CV05 0003 0000 0098 7654 3210 0',
+    nibMascarado: 'CV05 •••• •••• •••• 3210 0',
+    cor: '#003893',
+  },
+];
+
+export const bancosDisponiveis = [
+  { id: 'bca', sigla: 'BCA', nome: 'Banco Comercial do Atlântico', cor: '#003893' },
+  { id: 'cecv', sigla: 'CECV', nome: 'Caixa Económica de Cabo Verde', cor: '#00A651' },
+  { id: 'eco', sigla: 'ECV', nome: 'Ecobank Cabo Verde', cor: '#F5A623' },
+  { id: 'bci', sigla: 'BI', nome: 'Banco Cabo-verdiano de Negócios', cor: '#CF2027' },
+];
+
+export const servicosEstado = [
+  {
+    id: '1',
+    nome: 'IUR - Imposto Único sobre Rendimentos',
+    entidade: 'DGCI',
+    categoria: 'Impostos',
+    icone: 'building.2.fill' as const,
+    cor: '#003893',
+  },
+  {
+    id: '2',
+    nome: 'Multas de Trânsito',
+    entidade: 'Polícia Nacional',
+    categoria: 'Multas',
+    icone: 'exclamationmark.triangle.fill' as const,
+    cor: '#CF2027',
+  },
+  {
+    id: '3',
+    nome: 'Taxa de Passaporte',
+    entidade: 'DGAPE',
+    categoria: 'Taxas',
+    icone: 'doc.text.fill' as const,
+    cor: '#F5A623',
+  },
+  {
+    id: '4',
+    nome: 'Renovação CNI',
+    entidade: 'SNIAC',
+    categoria: 'Identificação',
+    icone: 'shield.fill' as const,
+    cor: '#003893',
+  },
+  {
+    id: '5',
+    nome: 'Consultas e Exames SNS',
+    entidade: 'Ministério da Saúde',
+    categoria: 'Saúde',
+    icone: 'star.fill' as const,
+    cor: '#00A651',
+  },
+  {
+    id: '6',
+    nome: 'Propinas Universitárias',
+    entidade: 'Universidade de Cabo Verde',
+    categoria: 'Educação',
+    icone: 'info.circle.fill' as const,
+    cor: '#6B4EFF',
+  },
+];

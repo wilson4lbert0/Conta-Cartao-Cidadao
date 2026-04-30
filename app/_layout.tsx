@@ -16,7 +16,14 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+        <Stack.Screen name="meu-cartao" options={{ headerShown: false }} />
+        <Stack.Screen name="ativar-conta" options={{ presentation: 'modal', headerShown: false }} />
+        <Stack.Screen name="historico" options={{ headerShown: false }} />
+        <Stack.Screen name="receber" options={{ headerShown: false }} />
+        <Stack.Screen name="nova-transferencia" options={{ headerShown: false }} />
+        <Stack.Screen name="pagar" options={{ headerShown: false }} />
+        <Stack.Screen name="notificacoes" options={{ headerShown: false }} />
+        <Stack.Screen name="contas" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
